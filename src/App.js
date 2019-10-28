@@ -4,6 +4,7 @@ import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 import './css/app.css';
 
+//original data that we're starting out with
 const data = [
   {
     task: 'Organize Garage',
@@ -18,10 +19,8 @@ const data = [
 ];
 
 class App extends React.Component {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
 
+  //app's state for storing more data
   constructor() {
     super();
     this.state = {
@@ -29,8 +28,7 @@ class App extends React.Component {
     };
   };
 
-
-
+  //allows a new todo item to be added to the list
   addItem = task => {
     const newTask = {
       task: task,
@@ -42,6 +40,7 @@ class App extends React.Component {
     });
   };
 
+  //allows todo items to toggle state. Used in Todo.js to change the className. Will add styling that strikes through the todo item text when toggled to complete
   toggleCompleted = id => {
     this.setState({
       tasks: this.state.tasks.map(item => {
@@ -57,12 +56,22 @@ class App extends React.Component {
     })
   };
 
+  filterCompleted = () => {
+    this.setState({
+      tasks: this.state.tasks.filter(item => {
+        return item.completed === false
+      })
+    })
+  };
+
   render() {
     return (
       <div className="App">
         <div className="header">
           <h2>Todos</h2>
-          <TodoForm addItem={this.addItem} />
+          <TodoForm
+            filterCompleted={this.filterCompleted}
+            addItem={this.addItem} />
         </div>
         <TodoList
           toggleCompleted={this.toggleCompleted}
