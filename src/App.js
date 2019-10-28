@@ -7,12 +7,12 @@ import './css/app.css';
 //original data that we're starting out with
 const data = [
   {
-    task: 'Organize Garage',
+    task: 'Code All The Things!!',
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    task: 'Get Some Sleep',
     id: 1528817084358,
     completed: false
   }
