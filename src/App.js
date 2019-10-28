@@ -42,6 +42,21 @@ class App extends React.Component {
     });
   };
 
+  toggleCompleted = id => {
+    this.setState({
+      tasks: this.state.tasks.map(item => {
+        if (item.id === id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        } else {
+          return item;
+        }
+      })
+    })
+  };
+
   render() {
     return (
       <div className="App">
