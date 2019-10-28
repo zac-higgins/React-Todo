@@ -1,0 +1,88 @@
+.App {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        .formModule{
+
+            width: 400px;
+
+            .form {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+    
+                input{
+                    width: 100%;
+                    height: 25px;
+                    background-color: #E8F3F1;
+                    border: #E8F3F1;
+                    font-size: 16px;
+                    padding: 6px 14px;
+                }
+            }
+            .buttons{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    .button{
+        background-color: #34BDB5;
+        border: #34BDB5;
+        color: white;
+        font-size: 16px;
+        padding: 6px 14px;
+        width: 62.5%;
+    }
+    
+    .clearButton{
+        background-color: #C68226;
+        border: #C68226;
+        color: white;
+        font-size: 16px;
+        padding: 6px 14px;
+        width: 37.5%;
+    }
+
+    .todoList{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 600px;
+        margin: 15px auto;
+
+        .task{
+            background-color: #677987;
+            width: 45%;
+            text-align: left;
+            margin: 15px 0;
+            padding-left: 8px;
+            cursor: pointer;
+        }
+
+        .taskCompleted{
+            background-color: #C68226;
+            width: 45%;
+            text-align: left;
+            margin: 15px 0;
+            padding-left: 8px;
+            cursor: pointer;
+            text-decoration: line-through;
+        }
+    }
+}
