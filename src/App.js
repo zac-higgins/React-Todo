@@ -1,6 +1,6 @@
 import React from 'react';
 // import ReactDom from 'react-dom';
-// import TodoList from './components/TodoComponents/TodoList';
+import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 import './css/app.css';
 
@@ -29,6 +29,8 @@ class App extends React.Component {
     };
   };
 
+
+
   addItem = task => {
     const newTask = {
       task: task,
@@ -47,7 +49,9 @@ class App extends React.Component {
           <h2>Todos</h2>
           <TodoForm addItem={this.addItem} />
         </div>
-        {/* <TodoList /> */}
+        <TodoList
+          toggleCompleted={this.toggleCompleted}
+          tasks={this.state.tasks} />
       </div>
     );
   }
