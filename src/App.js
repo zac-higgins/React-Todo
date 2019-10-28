@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDom from 'react-dom';
 // import TodoList from './components/TodoComponents/TodoList';
-// import TodoForm from './components/TodoComponents/TodoForm';
+import TodoForm from './components/TodoComponents/TodoForm';
 import './css/app.css';
 
 const data = [
@@ -45,7 +45,7 @@ class App extends React.Component {
       <div className="App">
         <div className="header">
           <h2>Todos</h2>
-          {/* <TodoForm /> */}
+          <TodoForm addItem={this.addItem} />
         </div>
         {/* <TodoList /> */}
       </div>
