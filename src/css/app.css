@@ -86,8 +86,11 @@ body {
   text-decoration: line-through;
 }
 @media (max-width: 800px) {
+  body {
+    padding-top: 5px;
+  }
   .App {
-    justify-content: center;
+    justify-content: start;
     align-items: center;
   }
   .App .todoList {
