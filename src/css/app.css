@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 100vw;
 }
 .App .header {
   display: flex;
@@ -93,5 +94,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 450px;
+    max-width: 100vw;
+  }
+  .App .todoList .task {
+    width: 85%;
+  }
+  .App .todoList .taskCompleted {
+    width: 85%;
   }
 }
