@@ -58,7 +58,7 @@ body {
   color: white;
   font-size: 16px;
   padding: 6px 14px;
-  width: 37.5%;
+  width: 38%;
 }
 .App .todoList {
   display: flex;
@@ -84,15 +84,14 @@ body {
   cursor: pointer;
   text-decoration: line-through;
 }
-@media (max-widh: 800px) {
-  body {
-    background-color: red;
-  }
+@media (max-width: 800px) {
   .App {
     justify-content: center;
     align-items: center;
   }
-  .App .header {
-    border: 2px solid red;
+  .App .todoList {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
