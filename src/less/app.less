@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // max-width: 100vw;
+    max-width: 100vw;
 
     .header{
         display: flex;
@@ -101,6 +101,9 @@ body {
 
 @media (max-width: 800px){
 
+    body{
+        
+    }
     .App{
         justify-content: center;
         align-items: center;
@@ -108,6 +111,15 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 450px;
+            max-width: 100vw;
+
+            .task{
+                width: 85%;
+            }
+            .taskCompleted{
+                width: 85%;
+            }
         }
     }
 }
